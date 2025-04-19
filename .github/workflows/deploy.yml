@@ -10,8 +10,8 @@ jobs:
   test:
     env: # Job level env variables
       MONGODB_CLUSTER_ADDRESS: cluster0.xnelq2v.mongodb.net
-      MONGODB_USERNAME: alexeino
-      MONGODB_PASSWORD: android@123
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
